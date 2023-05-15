@@ -12,7 +12,7 @@ var sections = [
     { title: "SJ", duration: 1560 }  // 26 minutes = 26 * 60 seconds
 ];
 
-var breakDuration = 80; // 1 minute 20 seconds
+var breakDuration = 60; // 1 minute 20 seconds
 var currentSectionIndex = 0;
 var isBreak = false;
 var isPaused = false;
@@ -57,9 +57,10 @@ function updateTimer() {
         clearInterval(timerInterval);
         timerElement.innerText = "00:00";
 
+        // If in a break or at last section, move to next section
         if (isBreak || currentSectionIndex === sections.length - 1) {
-            endProgram();
-        } else {
+            nextSection();
+        } else { // Otherwise, introduce a break
             timeRemaining = breakDuration;
             isBreak = true;
             displaySectionTitle();
@@ -67,6 +68,13 @@ function updateTimer() {
             pauseButton.disabled = true;
             nextButton.disabled = false;
             endButton.disabled = false;
+
+            // Display the break time immediately
+            var minutes = Math.floor(timeRemaining / 60);
+            var seconds = timeRemaining % 60;
+            timerElement.innerText = formatTime(minutes) + ":" + formatTime(seconds);
+
+            startTimer(); // Automatically start the timer
         }
     }
 }
@@ -86,33 +94,32 @@ function formatTime(time) {
 
 function nextSection() {
     if (isPaused) {
-      pauseTimer(); // Resume the timer if paused
+        pauseTimer(); // Resume the timer if paused
     }
-    
+
     if (!isBreak) {
-      // If current section is the last one, restart the program
-      if (currentSectionIndex === sections.length - 1) {
-        endProgram();
-      } else {
-        timeRemaining = breakDuration;
-        isBreak = true;
+        // If current section is the last one, restart the program
+        if (currentSectionIndex === sections.length - 1) {
+            endProgram();
+        } else {
+            timeRemaining = breakDuration;
+            isBreak = true;
+            displaySectionTitle();
+            startTimer(); // Automatically start the timer
+        }
+    } else {
+        currentSectionIndex++;
+        timeRemaining = sections[currentSectionIndex].duration;
+        isBreak = false;
         displaySectionTitle();
         startTimer(); // Automatically start the timer
-      }
-    } else {
-      currentSectionIndex++;
-      timeRemaining = sections[currentSectionIndex].duration;
-      isBreak = false;
-      displaySectionTitle();
-      startTimer(); // Automatically start the timer
     }
-  
+
     // Update the timer display
     var minutes = Math.floor(timeRemaining / 60);
     var seconds = timeRemaining % 60;
     timerElement.innerText = formatTime(minutes) + ":" + formatTime(seconds);
-  }
-  
+}
 
 function endProgram() {
     currentSectionIndex = 0;
@@ -131,6 +138,5 @@ function endProgram() {
     var seconds = timeRemaining % 60;
     timerElement.innerText = formatTime(minutes) + ":" + formatTime(seconds);
 }
-
 
 displaySectionTitle();
