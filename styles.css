@@ -4,15 +4,22 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  
-  h1 {
-    font-size: 48px;
-  }
-  
-  button {
+}
+
+h1 {
+    font-size: 80px;
+}
+
+/*add header 2 font styles: underline, bold, red*/
+h2 {
+    font-size: 40px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: red;
+}
+
+button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 18px;
-  }
-  
+}
