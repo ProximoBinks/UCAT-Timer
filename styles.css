@@ -38,7 +38,7 @@ h1 {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -102,7 +102,7 @@ button:not(:disabled):hover {
     }
 
     h2 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     button {
@@ -127,7 +127,7 @@ button:not(:disabled):hover {
     }
 
     h2 {
-        font-size: 50px;
+        font-size: 40px;
         /* Adjust the value as needed */
     }
 
