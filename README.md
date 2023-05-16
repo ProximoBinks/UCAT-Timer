@@ -1,6 +1,6 @@
 # UCAT Timer
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ProximoBinks/Ucat-Timer/blob/main/LICENSE){:target="_blank"}
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ProximoBinks/Ucat-Timer/blob/main/LICENSE)
 
 A timer used in a tutoring business to help students keep track of their time while doing mock exams for the UCAT (University Clinical Aptitude Test).
 
@@ -13,7 +13,7 @@ A timer used in a tutoring business to help students keep track of their time wh
 
 ## Demo
 
-You can try out the UCAT Timer [here](https://proximobinks.github.io/UCAT-Timer/){:target="_blank"}.
+You can try out the UCAT Timer [here](https://proximobinks.github.io/UCAT-Timer/).
 
 ## Usage
 
@@ -25,7 +25,7 @@ You can try out the UCAT Timer [here](https://proximobinks.github.io/UCAT-Timer/
 
 ## Getting Started
 
-   1. Click [here](https://proximobinks.github.io/UCAT-Timer/){:target="_blank"} to use the timer online!
+   1. Click [here](https://proximobinks.github.io/UCAT-Timer/) to use the timer online!
 
 To use the UCAT Timer locally, follow these steps:
 
