@@ -25,17 +25,17 @@ You can try out the UCAT Timer [here](https://proximobinks.github.io/UCAT-Timer/
 
 ## Getting Started
 
-1. Click [here](https://proximobinks.github.io/UCAT-Timer/) to use the timer online!
+   1. Click [here](https://proximobinks.github.io/UCAT-Timer/) to use the timer online!
 
 To use the UCAT Timer locally, follow these steps:
 
-1. Clone the repository:
+   1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ProximoBinks/Ucat-Timer.git```
+   git clone https://github.com/ProximoBinks/Ucat-Timer.git`
 
-2. Open the index.html file in your web browser.
+   2. Open the index.html file in your web browser.
 
-##License
+## License
 
 This project is licensed under the MIT License.
