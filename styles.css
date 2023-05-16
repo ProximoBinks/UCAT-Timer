@@ -33,12 +33,12 @@ h2 {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 50px;
     margin: 0;
 }
 
@@ -69,11 +69,11 @@ button:not(:disabled):hover {
     }
 
     h1 {
-        font-size: 96px;
+        font-size: 120px;
     }
 
     h2 {
-        font-size: 48px;
+        font-size: 70px;
     }
 
     button {
@@ -98,11 +98,11 @@ button:not(:disabled):hover {
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 80px;
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 50px;
     }
 
     button {
@@ -122,12 +122,12 @@ button:not(:disabled):hover {
     /* Existing styles for small screens */
 
     h1 {
-        font-size: 32px;
+        font-size: 80px;
         /* Adjust the value as needed */
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 50px;
         /* Adjust the value as needed */
     }
 
