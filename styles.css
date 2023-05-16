@@ -8,7 +8,9 @@ body {
     max-width: 400px;
     display: block;
     margin: 50px auto 30px;
+    max-height: 100px;
 }
+
 .timer-container {
     display: flex;
     flex-direction: column;
@@ -86,24 +88,51 @@ button:not(:disabled):hover {
     }
 
     h1 {
-        font-size: 48px; /* Increased font size */
+        font-size: 48px;
+        /* Increased font size */
     }
 
     h2 {
-        font-size: 24px; /* Increased font size */
+        font-size: 24px;
+        /* Increased font size */
     }
 
     button {
-        padding: 10px 20px; /* Increased padding */
-        font-size: 16px; /* Increased font size */
+        padding: 10px 20px;
+        /* Increased padding */
+        font-size: 16px;
+        /* Increased font size */
         margin-top: 10px;
     }
 
     #logo {
-        margin-top: 10px; /* Adjusted margin value */
-        max-width: 300px; /* Reduced logo size */
+        margin-top: 10px;
+        /* Adjusted margin value */
+        max-width: 300px;
+        /* Reduced logo size */
     }
 }
+
+/* Small screens */
+@media only screen and (max-width: 600px) and (max-device-width: 480px) and (orientation: portrait) {
+    /* Existing styles for small screens */
+
+    h1 {
+        font-size: 32px;
+        /* Adjust the value as needed */
+    }
+
+    h2 {
+        font-size: 16px;
+        /* Adjust the value as needed */
+    }
+
+    button {
+        font-size: 12px;
+        /* Adjust the value as needed */
+    }
+}
+
 
 
 .button-container {
@@ -127,9 +156,10 @@ button:not(:disabled):hover {
 
 @media (orientation: landscape) {
     .button-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-top: 50px;  /* Add this line */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+        /* Add this line */
     }
-  }
+}
