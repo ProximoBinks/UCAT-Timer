@@ -32,7 +32,8 @@ To use the UCAT Timer locally, follow these steps:
    1. Clone the repository:
 
    ```bash
-   git clone https://github.com/ProximoBinks/Ucat-Timer.git`
+   git clone https://github.com/ProximoBinks/Ucat-Timer.git
+```
 
    2. Open the index.html file in your web browser.
 
