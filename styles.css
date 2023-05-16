@@ -81,6 +81,13 @@ button:not(:disabled):hover {
     }
 }
 
+/* Landscape mode on larger screens */
+@media (min-width: 600px) and (orientation: landscape) {
+    #logo {
+        max-height: 80px; /* Adjust the value as needed */
+    }
+}
+
 /* Small screens */
 @media (max-width: 600px) {
     .timer-container {
