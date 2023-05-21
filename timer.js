@@ -3,6 +3,7 @@ var startButton = document.getElementById("start-button");
 var pauseButton = document.getElementById("pause-button");
 var nextButton = document.getElementById("next-button");
 var endButton = document.getElementById("end-button");
+var audio = new Audio("ding.mp3"); // Create the audio element
 
 var sections = [
     { title: "VR", duration: 1260 }, // 21 minutes = 21 * 60 seconds
@@ -12,7 +13,7 @@ var sections = [
     { title: "SJ", duration: 1560 }  // 26 minutes = 26 * 60 seconds
 ];
 
-var breakDuration = 60; // 1 minute 20 seconds
+var breakDuration = 60; // 1 minute
 var currentSectionIndex = 0;
 var isBreak = false;
 var isPaused = false;
@@ -54,12 +55,9 @@ function updateTimer() {
     timerElement.innerText = formatTime(minutes) + ":" + formatTime(seconds);
 
     if (timeRemaining === 0) {
+        audio.play();
         clearInterval(timerInterval);
         timerElement.innerText = "00:00";
-
-        // Play the sound
-        var audio = new Audio("ding.mp3");
-        audio.play();
 
         // If in a break or at the last section, move to the next section
         if (isBreak || currentSectionIndex === sections.length - 1) {
