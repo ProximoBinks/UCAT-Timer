@@ -57,7 +57,11 @@ function updateTimer() {
         clearInterval(timerInterval);
         timerElement.innerText = "00:00";
 
-        // If in a break or at last section, move to next section
+        // Play the sound
+        var audio = new Audio("ding.mp3");
+        audio.play();
+
+        // If in a break or at the last section, move to the next section
         if (isBreak || currentSectionIndex === sections.length - 1) {
             nextSection();
         } else { // Otherwise, introduce a break
