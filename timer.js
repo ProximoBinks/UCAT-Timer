@@ -114,6 +114,7 @@ function nextSection() {
         timeRemaining = sections[currentSectionIndex].duration;
         isBreak = false;
         displaySectionTitle();
+        audio.play(); // Play the sound when a new section starts
         startTimer(); // Automatically start the timer
     }
 
